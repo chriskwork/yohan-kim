@@ -17,5 +17,5 @@ let sr = ScrollReveal({
   distance: '60px',
 });
 
-sr.reveal('.showcase-info', { delay: 500 });
-sr.reveal('.showcase-image', { origin: 'top', delay: 600 });
+// sr.reveal('.showcase-info', { delay: 500 });
+// sr.reveal('.showcase-image', { origin: 'top', delay: 600 });
