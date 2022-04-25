@@ -1,0 +1,90 @@
+.showcase {
+  padding: 120px 0;
+  width: 100%;
+  overflow: hidden;
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: calc(100vh - 120px);
+    max-height: 600px;
+    align-items: center;
+
+    .sub-heading {
+      color: var(--heading-color);
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      letter-spacing: 0.5px;
+      border-left: 3px solid var(--main-color-2);
+      padding: 0.13rem 0.75rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+
+      span {
+        color: var(--main-color-1);
+      }
+    }
+
+    .heading {
+      font-family: 'Abril Fatface', cursive;
+      color: var(--heading-color);
+      font-size: 3.5rem;
+      letter-spacing: 2px;
+    }
+
+    .text {
+      margin: 0.8rem 0;
+      color: var(--text-color);
+      font-size: 0.95rem;
+    }
+
+    .cta {
+      margin-top: 3.5rem;
+      display: flex;
+      align-items: center;
+
+      .btn {
+        padding: 0.9rem 1.75rem;
+        border-radius: 16px;
+        background-color: var(--main-color-1);
+        color: #fff;
+        font-size: 0.85rem;
+        letter-spacing: 0.4px;
+        text-transform: capitalize;
+        transition: var(--transition);
+        margin-right: 1.5rem;
+
+        &:hover {
+          background-color: var(--main-color-dark-1);
+        }
+      }
+
+      .btn.secondary-btn {
+        position: relative;
+        background-color: transparent;
+        color: var(--main-color-1);
+        font-weight: 500;
+        font-size: 0.9rem;
+        letter-spacing: 0;
+        border-bottom: 3px solid var(--main-color-2);
+        border-radius: 0px;
+        padding: 0.15rem 0;
+
+        &::before {
+          content: '';
+          position: absolute;
+          width: 0;
+          height: 3px;
+          bottom: -3px;
+          left: 0;
+          background-color: var(--main-color-1);
+          transition: var(--transition) ease-in-out;
+        }
+
+        &:hover::before {
+          width: 100%;
+        }
+      }
+    }
+  } // container
+} // showcase

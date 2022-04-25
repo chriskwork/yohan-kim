@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- main css style -->
     <link rel="stylesheet" href="./css/main.css" />
-    <!-- icon cdn -->
-
+    <!-- scroll animation -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    
     <title>Yohan Kim. Portfolio Website</title>
   </head>
   <body>
@@ -27,7 +28,8 @@
             <li><a href="#" class="nav-link">Portfolio</a></li>
             <li><a href="#" class="nav-link">Contact</a></li>
           </ul>
-          <div class="moon" style="width: 24px; height: 24px">
+          <div class="mode-toggle-btn">
+
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               <path
                 fill="#6563ff"
@@ -35,9 +37,31 @@
               />
             </svg>
           </div>
+          </div>
         </div>
       </nav>
     </header>
+
+    <main>
+      <section class="showcase">
+        <div class="container">
+          <div class="showcase-info">
+            <h3 class="sub-heading">Graphic designer<span> & </span>Web developer</h3>
+            <h1 class="heading">Yohan Kim.</h1>
+            <p class="text">I am a freelance graphic designer and web developer</p>
+
+            <div class="cta">
+              <a href="mailto:yovirinc@gmail.com" class="btn">Contact Me</a>
+              <a href="#" download class="btn secondary-btn">Download CV</a>
+            </div>
+          </div>
+
+          <div class="showcase-image">
+            <img src="./assets/intro-me-final.svg" class="me-work" alt="showcase illustration">
+          </div>
+        </div>
+      </section>
+    </main>
 
     <script src="./js/main.js"></script>
   </body>
