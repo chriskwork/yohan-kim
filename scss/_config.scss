@@ -126,47 +126,49 @@ header {
   margin-top: 3.5rem;
   display: flex;
   align-items: center;
+}
 
-  .btn {
-    padding: 0.9rem 1.75rem;
-    border-radius: 16px;
+.btn {
+  padding: 0.9rem 1.75rem;
+  border-radius: 16px;
+  background-color: var(--main-color-1);
+  color: #fff;
+  font-size: 0.85rem;
+  letter-spacing: 0.4px;
+  text-transform: capitalize;
+  transition: var(--transition);
+  margin-right: 1.5rem;
+  min-width: 126px;
+  text-align: center;
+
+  &:hover {
+    background-color: var(--main-color-dark-1);
+  }
+}
+
+.btn.secondary-btn {
+  position: relative;
+  background-color: transparent;
+  color: var(--main-color-1);
+  font-weight: 500;
+  font-size: 0.9rem;
+  letter-spacing: 0;
+  border-bottom: 3px solid var(--main-color-2);
+  border-radius: 0px;
+  padding: 0.15rem 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: -3px;
+    left: 0;
     background-color: var(--main-color-1);
-    color: #fff;
-    font-size: 0.85rem;
-    letter-spacing: 0.4px;
-    text-transform: capitalize;
-    transition: var(--transition);
-    margin-right: 1.5rem;
-
-    &:hover {
-      background-color: var(--main-color-dark-1);
-    }
+    transition: var(--transition) ease-in-out;
   }
 
-  .btn.secondary-btn {
-    position: relative;
-    background-color: transparent;
-    color: var(--main-color-1);
-    font-weight: 500;
-    font-size: 0.9rem;
-    letter-spacing: 0;
-    border-bottom: 3px solid var(--main-color-2);
-    border-radius: 0px;
-    padding: 0.15rem 0;
-
-    &::before {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 3px;
-      bottom: -3px;
-      left: 0;
-      background-color: var(--main-color-1);
-      transition: var(--transition) ease-in-out;
-    }
-
-    &:hover::before {
-      width: 100%;
-    }
+  &:hover::before {
+    width: 100%;
   }
 }
