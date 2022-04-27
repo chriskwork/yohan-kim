@@ -1,4 +1,6 @@
 // ################## Navbar
+//
+//
 
 const header = document.querySelector('header');
 
@@ -21,6 +23,8 @@ let sr = ScrollReveal({
 // sr.reveal('.showcase-image', { origin: 'top', delay: 600 });
 
 // ################## Skills
+//
+//
 
 const firstSkill = document.querySelector('.skill:first-child');
 const skCounters = document.querySelectorAll('.counter span');
@@ -28,6 +32,7 @@ const progressBars = document.querySelectorAll('.skills svg circle');
 
 window.addEventListener('scroll', () => {
   if (!skillsPlayed) skillsCounter();
+  if (!mlPlayed) mlCounter();
 });
 
 function hasReached(el) {
@@ -71,5 +76,27 @@ function skillsCounter() {
 
   progressBars.forEach((p) => {
     p.style.animation = 'progress 2s ease-in-out forwards';
+  });
+}
+
+// ################## My Services section
+//
+//
+
+const milestone = document.querySelector('.milestones');
+const mlCounters = milestone.querySelectorAll('.number span');
+
+let mlPlayed = false;
+
+function mlCounter() {
+  if (!hasReached(milestone)) return;
+  mlPlayed = true;
+
+  mlCounters.forEach((ctr) => {
+    let target = +ctr.dataset.target;
+
+    setTimeout(() => {
+      updateCount(ctr, target);
+    }, 400);
   });
 }
