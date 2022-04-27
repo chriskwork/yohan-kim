@@ -100,3 +100,16 @@ function mlCounter() {
     }, 400);
   });
 }
+
+// ################## Portfolio section
+//
+// filter
+
+let mixer = mixitup('.portfolio-gallery', {
+  selectors: {
+    target: '.pf-card',
+  },
+  animation: {
+    duration: 500,
+  },
+});

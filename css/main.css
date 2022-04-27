@@ -686,3 +686,157 @@ header.scrolled .logo {
   z-index: -1;
   opacity: 0.07;
 }
+
+.portfolio .portfolio-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 4rem;
+}
+
+.portfolio .portfolio-header .portfolio-title {
+  padding-bottom: 1rem;
+}
+
+.portfolio .portfolio-header .filter-btn {
+  display: inline-block;
+  color: var(--heading-color);
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  margin-left: 1.2rem;
+}
+
+.portfolio .portfolio-gallery {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.portfolio .pf-card {
+  border-radius: 14px;
+  overflow: hidden;
+  background-color: var(--bg-color-2);
+  height: 260px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr auto;
+      grid-template-rows: 1fr auto;
+}
+
+.portfolio .pf-image {
+  overflow: hidden;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.portfolio .pf-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.portfolio .pf-image:hover .pf-overlay {
+  pointer-events: auto;
+  background-color: var(--bg-color-transparent);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+}
+
+.portfolio .pf-image:hover .pf-overlay .pf-icon svg {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
+.portfolio .pf-image .pf-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  -webkit-backdrop-filter: blur(0px);
+          backdrop-filter: blur(0px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  pointer-events: none;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.portfolio .pf-image .pf-overlay .pf-icon svg {
+  width: 40px;
+  height: auto;
+  padding: 10px;
+  margin: 0 0.5rem;
+  background-color: var(--main-color-2);
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  opacity: 0;
+  -webkit-transform: translateY(14px);
+          transform: translateY(14px);
+}
+
+.portfolio .pf-image .pf-overlay .pf-icon svg path {
+  fill: #fff;
+}
+
+.portfolio .pf-image .pf-overlay .pf-icon svg:hover {
+  -webkit-filter: brightness(97%);
+          filter: brightness(97%);
+}
+
+.portfolio .pf-desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1.1rem 1.5rem;
+}
+
+.portfolio .pf-desc h3 {
+  font-size: 0.9rem;
+  color: var(--heading-color);
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.portfolio .btn.sm {
+  padding: 0.07rem 0.1rem;
+  font-size: 0.78rem;
+  border-bottom-width: 2px;
+}
+
+.portfolio .btn.sm::before {
+  height: 2px;
+  bottom: -2px;
+}
