@@ -89,7 +89,7 @@ header {
   font-family: 'Abril Fatface', cursive;
   font-size: 1.5rem;
   color: var(--heading-color);
-  letter-spacing: 1px;
+  letter-spacing: 0.3px;
 }
 
 .logo .logo-fname {
@@ -199,6 +199,7 @@ nav.container {
 header .logo {
   height: 120px;
   line-height: 120px;
+  font-size: 1.7rem;
 }
 
 header {
@@ -922,4 +923,176 @@ header.scrolled .logo {
 
 .portfolio .modal svg path {
   fill: #fff;
+}
+
+.contact .container {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -webkit-column-gap: 4rem;
+          column-gap: 4rem;
+}
+
+.contact .container .mail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--main-color-1);
+}
+
+.contact .container .mail svg {
+  width: 24px;
+  margin-left: 4px;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.contact .container .mail svg path {
+  fill: var(--main-color-1);
+}
+
+.contact .container .mail:hover svg {
+  margin-left: 10px;
+}
+
+.contact .container .contact-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 3.5rem 3rem;
+  background-color: var(--bg-color-2);
+  border-radius: 16px;
+}
+
+.contact .container .contact-form h3 {
+  color: var(--heading-color);
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact .container .contact-form .form-input {
+  display: inline-block;
+  width: 100%;
+  padding: 0.9rem 1.5rem;
+  background-color: var(--bg-color-3);
+  border: 2px solid var(--bg-color-3);
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  font-family: inherit;
+  font-weight: 300;
+  font-size: 0.85rem;
+  color: var(--heading-color);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  outline: none;
+}
+
+.contact .container .contact-form .form-input::-webkit-input-placeholder {
+  color: var(--text-color);
+}
+
+.contact .container .contact-form .form-input:-ms-input-placeholder {
+  color: var(--text-color);
+}
+
+.contact .container .contact-form .form-input::-ms-input-placeholder {
+  color: var(--text-color);
+}
+
+.contact .container .contact-form .form-input::placeholder {
+  color: var(--text-color);
+}
+
+.contact .container .contact-form .form-input:focus {
+  background-color: var(--bg-color-1);
+  border: 2px solid var(--bg-color-1);
+}
+
+.contact .container .contact-form textarea.form-input {
+  resize: none;
+  min-height: 180px;
+}
+
+.contact .container .contact-form .btn {
+  font-family: inherit;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.contact .container .square {
+  width: 90px;
+  position: absolute;
+  top: 80%;
+  left: 46%;
+  z-index: -1;
+  opacity: 0.2;
+}
+
+footer {
+  padding: 4rem 0;
+}
+
+footer .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .social-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .social-link {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  margin-left: 1rem;
+  background-color: var(--bg-color-1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+footer .social-link:hover {
+  -webkit-filter: brightness(97%);
+          filter: brightness(97%);
+}
+
+footer .social-link svg {
+  width: 20px;
+}
+
+footer .social-link svg path {
+  fill: var(--text-color);
+}
+
+footer .text {
+  font-size: 0.8rem;
 }

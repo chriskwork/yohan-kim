@@ -1,0 +1,41 @@
+footer {
+  padding: 4rem 0;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .social-media {
+    display: flex;
+  }
+
+  .social-link {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    margin-left: 1rem;
+    background-color: var(--bg-color-1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+
+    &:hover {
+      filter: brightness(97%);
+    }
+
+    svg {
+      width: 20px;
+
+      path {
+        fill: var(--text-color);
+      }
+    }
+  }
+
+  .text {
+    font-size: 0.8rem;
+  }
+}
