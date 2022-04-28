@@ -113,3 +113,32 @@ let mixer = mixitup('.portfolio-gallery', {
     duration: 500,
   },
 });
+
+// modal pop-up animation
+
+// const pfSection = document.querySelector('.portfolio');
+// const zoomIcons = pfSection.querySelectorAll('.zoom-icon');
+// const modalOverlay = pfSection.querySelector('.modal-overlay');
+// const modalImgs = pfSection.querySelectorAll('.images img');
+
+// let currentIndex = 0;
+
+// zoomIcons.forEach((icon, i) => {
+//   icon.addEventListener('click', () => {
+//     pfSection.classList.add('open');
+//     document.body.classList.add('stopScroll');
+
+//     currentIndex = i;
+//     swipeImage(currentIndex);
+//   });
+// });
+
+// modalOverlay.addEventListener('click', () => {
+//   pfSection.classList.remove('open');
+//   document.body.classList.remove('stopScroll');
+// });
+
+// function swipeImage(index) {
+//   modalImgs.forEach((img) => img.classList.remove('showImage'));
+//   modalImgs[index].classList.add('showImage');
+// }

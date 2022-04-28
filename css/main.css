@@ -45,6 +45,11 @@ body {
   background-color: var(--bg-color);
 }
 
+body.stopScroll {
+  height: 100%;
+  overflow: hidden;
+}
+
 ::-moz-selection {
   background-color: hsla(var(--hue-1), 100%, 60%, 0.9);
   color: #fff;
@@ -687,6 +692,11 @@ header.scrolled .logo {
   opacity: 0.07;
 }
 
+.portfolio .container {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
 .portfolio .portfolio-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -839,4 +849,77 @@ header.scrolled .logo {
 .portfolio .btn.sm::before {
   height: 2px;
   bottom: -2px;
+}
+
+.portfolio .modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 99;
+  pointer-events: none;
+}
+
+.portfolio .modal .modal-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.portfolio .modal .slider-wrap {
+  position: absolute;
+  width: 90%;
+  max-width: 900px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, calc(-50% + 300px));
+          transform: translate(-50%, calc(-50% + 300px));
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100px 1fr 100px;
+      grid-template-columns: 100px 1fr 100px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  opacity: 0;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.portfolio .modal .slider-wrap .navigation {
+  cursor: pointer;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.portfolio .modal .slider-wrap .navigation:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.portfolio .modal .slider-wrap img {
+  width: 100%;
+  border-radius: 10px;
+  display: none;
+}
+
+.portfolio .modal .slider-wrap img.showImage {
+  display: block;
+}
+
+.portfolio .modal svg {
+  width: 40px;
+}
+
+.portfolio .modal svg path {
+  fill: #fff;
 }

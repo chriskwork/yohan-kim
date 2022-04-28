@@ -45,6 +45,11 @@ body {
   background-color: var(--bg-color);
 }
 
+body.stopScroll {
+  height: 100%;
+  overflow: hidden;
+}
+
 ::selection {
   background-color: hsla(var(--hue-1), 100%, 60%, 0.9);
   color: #fff;
