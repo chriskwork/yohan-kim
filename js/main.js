@@ -31,6 +31,7 @@ const skCounters = document.querySelectorAll('.counter span');
 const progressBars = document.querySelectorAll('.skills svg circle');
 
 window.addEventListener('scroll', () => {
+  activeLink();
   if (!skillsPlayed) skillsCounter();
   if (!mlPlayed) mlCounter();
 });
@@ -142,3 +143,26 @@ let mixer = mixitup('.portfolio-gallery', {
 //   modalImgs.forEach((img) => img.classList.remove('showImage'));
 //   modalImgs[index].classList.add('showImage');
 // }
+
+// ################## Active scroll (header)
+//
+//
+
+const links = document.querySelectorAll('.nav-link');
+
+function activeLink() {
+  let sections = document.querySelectorAll('section[id]');
+  let passedSections = Array.from(sections)
+    .map((sct, i) => {
+      return {
+        y: sct.getBoundingClientRect().top - header.offsetHeight,
+        id: i,
+      };
+    })
+    .filter((sct) => sct.y <= 0);
+
+  let currentSectionId = passedSections.at(-1).id;
+
+  links.forEach((link) => link.classList.remove('active'));
+  links[currentSectionId].classList.add('active');
+}
