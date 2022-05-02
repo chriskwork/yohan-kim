@@ -59,11 +59,13 @@ header.scrolled .logo {
         transition: var(--transition);
       }
 
-      &:hover {
+      &:hover,
+      &.active {
         color: var(--heading-color);
       }
 
-      &:hover::after {
+      &:hover::after,
+      &.active::after {
         width: 100%;
         opacity: 0.1;
       }
