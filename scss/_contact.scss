@@ -30,6 +30,7 @@
     padding: 3.5rem 3rem;
     background-color: var(--bg-color-2);
     border-radius: 16px;
+    transition: var(--transition) background-color;
 
     h3 {
       color: var(--heading-color);

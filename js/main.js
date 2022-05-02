@@ -173,9 +173,25 @@ function activeLink() {
 
 const switchModeBtn = header.querySelector('.mode-toggle-btn');
 const bodyElement = document.querySelector('body');
+const modeImg = switchModeBtn.querySelector('img');
 
-switchModeBtn.addEventListener('click', switchMode);
+switchModeBtn.addEventListener('click', () =>
+  switchMode(!bodyElement.classList.contains('dark'))
+);
 
-function switchMode() {
-  bodyElement.classList.toggle('dark');
+const selectedMode = localStorage.getItem('dark');
+switchMode(+selectedMode);
+console.log(bodyElement.classList.contains('dark'));
+// 1= true, 0= false
+
+function switchMode(isDark) {
+  if (isDark) {
+    bodyElement.classList.add('dark');
+    modeImg.setAttribute('src', './assets/sun.svg');
+    localStorage.setItem('dark', 1);
+  } else {
+    bodyElement.classList.remove('dark');
+    modeImg.setAttribute('src', './assets/moon.svg');
+    localStorage.setItem('dark', 0);
+  }
 }

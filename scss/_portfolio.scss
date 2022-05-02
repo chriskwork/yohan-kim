@@ -41,6 +41,7 @@
     height: 260px;
     display: grid;
     grid-template-rows: 1fr auto;
+    transition: var(--transition) background-color;
   }
 
   .pf-image {

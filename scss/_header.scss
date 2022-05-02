@@ -85,6 +85,10 @@ header.scrolled .logo {
   cursor: pointer;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.05);
 
+  img {
+    width: 24px;
+  }
+
   svg {
     width: 20px;
     height: 20px;

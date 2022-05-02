@@ -41,7 +41,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: var(--transition);
+    transition: var(--transition) transform, var(--transition) background-color;
 
     h4 {
       color: var(--heading-color);

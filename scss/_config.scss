@@ -47,6 +47,7 @@ body {
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
   background-color: var(--bg-color);
+  transition: var(--transition) background-color;
 }
 
 body.stopScroll {
@@ -91,9 +92,11 @@ header {
   font-size: 1.5rem;
   color: var(--heading-color);
   letter-spacing: 0.3px;
+  transition: var(--transition) color;
 
   .logo-fname {
     color: var(--main-color-1);
+    transition: var(--transition) color;
   }
 }
 
@@ -111,6 +114,7 @@ header {
   padding: 0.13rem 0.75rem;
   margin-bottom: 1rem;
   font-weight: 600;
+  transition: var(--transition) color;
 
   span {
     color: var(--main-color-1);
@@ -122,6 +126,7 @@ header {
   color: var(--heading-color);
   font-size: 3.5rem;
   letter-spacing: 2px;
+  transition: var(--transition) color;
 }
 
 .text {
@@ -129,6 +134,7 @@ header {
   font-size: 0.9rem;
   margin: 2rem 0;
   line-height: 2;
+  transition: var(--transition) color;
 }
 
 .cta {
