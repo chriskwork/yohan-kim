@@ -97,3 +97,14 @@ header.scrolled .logo {
     filter: brightness(97%);
   }
 }
+
+// dark mode style
+
+body.dark .mode-toggle-btn:hover {
+  filter: brightness(120%);
+}
+
+body.dark .nav-link:hover::after,
+body.dark .nav-link.active::after {
+  opacity: 0.6;
+}

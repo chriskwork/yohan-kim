@@ -19,8 +19,8 @@ let sr = ScrollReveal({
   distance: '60px',
 });
 
-// sr.reveal('.showcase-info', { delay: 500 });
-// sr.reveal('.showcase-image', { origin: 'top', delay: 600 });
+sr.reveal('.showcase-info', { delay: 500 });
+sr.reveal('.showcase-image', { origin: 'top', delay: 600 });
 
 // ################## Skills
 //
@@ -165,4 +165,17 @@ function activeLink() {
 
   links.forEach((link) => link.classList.remove('active'));
   links[currentSectionId].classList.add('active');
+}
+
+// ################## Switch Mode (light & dark)
+//
+//
+
+const switchModeBtn = header.querySelector('.mode-toggle-btn');
+const bodyElement = document.querySelector('body');
+
+switchModeBtn.addEventListener('click', switchMode);
+
+function switchMode() {
+  bodyElement.classList.toggle('dark');
 }
