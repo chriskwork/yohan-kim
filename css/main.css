@@ -131,7 +131,7 @@ header {
 .heading {
   font-family: 'Abril Fatface', cursive;
   color: var(--heading-color);
-  font-size: 3.5rem;
+  font-size: 3rem;
   letter-spacing: 2px;
   -webkit-transition: var(--transition) color;
   transition: var(--transition) color;
@@ -355,11 +355,14 @@ body.dark .nav-link.active::after {
   display: grid;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
-  height: calc(100vh - 120px);
-  max-height: 540px;
+  height: 540px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.showcase .container .heading {
+  font-size: 3.5rem;
 }
 
 .about {
@@ -1073,6 +1076,7 @@ body.dark .nav-link.active::after {
   border: none;
   cursor: pointer;
   letter-spacing: 1px;
+  border-radius: 4px;
 }
 
 .contact .container .square {
@@ -1140,4 +1144,82 @@ footer .social-link svg path {
 
 footer .text {
   font-size: 0.8rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .sub-heading {
+    font-size: 0.75rem;
+  }
+  .heading {
+    font-size: 2.5rem;
+    letter-spacing: 0.5px;
+  }
+  .text {
+    font-size: 0.84rem;
+    margin: 1.3rem 0;
+  }
+  .btn {
+    padding: 0.8rem 1.6rem;
+    font-size: 0.8rem;
+    min-width: 100px;
+    border-radius: 14px;
+  }
+  .btn.secondary-btn {
+    font-size: 0.8rem;
+  }
+  .shape.square {
+    opacity: 0.15;
+  }
+  header .logo {
+    height: 100px;
+    line-height: 100px;
+    font-size: 1.45rem;
+  }
+  .nav-link {
+    font-size: 0.75rem;
+  }
+  .showcase {
+    padding: 100px 0;
+  }
+  .showcase .container {
+    -ms-grid-columns: 1fr 400px;
+        grid-template-columns: 1fr 400px;
+    height: 450px;
+  }
+  .showcase .heading {
+    font-size: 2.7rem;
+    letter-spacing: 0.5px;
+  }
+  .skill-box {
+    padding: 4rem;
+  }
+  .skills-wrap .skill .sk-progress {
+    -webkit-transform: scale(0.85);
+            transform: scale(0.85);
+  }
+  .services .container {
+    -webkit-column-gap: 2.5rem;
+            column-gap: 2.5rem;
+  }
+  .contact .container {
+    -webkit-column-gap: 2.5rem;
+            column-gap: 2.5rem;
+  }
+  .contact .container .contact-form {
+    padding: 2.5rem 2rem;
+  }
+  .contact .container .contact-form h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+  .contact .container .contact-form .form-input {
+    padding: 0.8rem 1.3rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --section-padding: 4.5rem;
+  }
 }

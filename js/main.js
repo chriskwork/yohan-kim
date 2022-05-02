@@ -181,7 +181,6 @@ switchModeBtn.addEventListener('click', () =>
 
 const selectedMode = localStorage.getItem('dark');
 switchMode(+selectedMode);
-console.log(bodyElement.classList.contains('dark'));
 // 1= true, 0= false
 
 function switchMode(isDark) {

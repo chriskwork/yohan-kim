@@ -1,0 +1,99 @@
+// 1000px Screens
+
+@media screen and (max-width: 1000px) {
+  // general setting
+  .sub-heading {
+    font-size: 0.75rem;
+  }
+
+  .heading {
+    font-size: 2.5rem;
+    letter-spacing: 0.5px;
+  }
+
+  .text {
+    font-size: 0.84rem;
+    margin: 1.3rem 0;
+  }
+
+  .btn {
+    padding: 0.8rem 1.6rem;
+    font-size: 0.8rem;
+    min-width: 100px;
+    border-radius: 14px;
+  }
+
+  .btn.secondary-btn {
+    font-size: 0.8rem;
+  }
+
+  .shape.square {
+    opacity: 0.15;
+  }
+
+  // header
+  header .logo {
+    height: 100px;
+    line-height: 100px;
+    font-size: 1.45rem;
+  }
+
+  .nav-link {
+    font-size: 0.75rem;
+  }
+
+  // showcase
+  .showcase {
+    padding: 100px 0;
+
+    .container {
+      grid-template-columns: 1fr 400px;
+      height: 450px;
+    }
+  }
+
+  .showcase .heading {
+    font-size: 2.7rem;
+    letter-spacing: 0.5px;
+  }
+
+  // skills
+  .skill-box {
+    padding: 4rem;
+  }
+
+  .skills-wrap .skill .sk-progress {
+    transform: scale(0.85);
+  }
+
+  // services
+  .services .container {
+    column-gap: 2.5rem;
+  }
+
+  // contact
+  .contact .container {
+    column-gap: 2.5rem;
+
+    .contact-form {
+      padding: 2.5rem 2rem;
+
+      h3 {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+      }
+
+      .form-input {
+        padding: 0.8rem 1.3rem;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+
+//  768px Screens
+@media screen and (max-width: 768px) {
+  :root {
+    --section-padding: 4.5rem;
+  }
+}

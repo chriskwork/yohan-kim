@@ -2,12 +2,16 @@
   padding: 120px 0;
   width: 100%;
   overflow: hidden;
+  // height: calc(100vh - 120px);
 
   .container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    height: calc(100vh - 120px);
-    max-height: 540px;
+    height: 540px;
     align-items: center;
+
+    .heading {
+      font-size: 3.5rem;
+    }
   } // container
 } // showcase
