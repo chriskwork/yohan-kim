@@ -955,8 +955,12 @@ body.dark .nav-link.active::after {
   text-transform: capitalize;
 }
 
+.portfolio .pf-desc span {
+  color: var(--main-color-2);
+  font-size: 0.7rem;
+}
+
 .portfolio .btn.sm {
-  border: 1px solid blue;
   padding: 0.07rem 0.1rem;
   font-size: 0.78rem;
   border-bottom-width: 2px;
@@ -1215,6 +1219,11 @@ footer .text {
   font-size: 0.8rem;
 }
 
+body.dark footer .social-link:hover {
+  -webkit-filter: brightness(120%);
+          filter: brightness(120%);
+}
+
 @media screen and (max-width: 1000px) {
   .sub-heading {
     font-size: 0.75rem;
@@ -1421,10 +1430,10 @@ footer .text {
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
             order: 3;
-    -ms-grid-columns: 160px 160px;
-        grid-template-columns: 160px 160px;
-    -ms-grid-rows: 160px 160px;
-        grid-template-rows: 160px 160px;
+    -ms-grid-columns: 180px 180px;
+        grid-template-columns: 180px 180px;
+    -ms-grid-rows: 180px 180px;
+        grid-template-rows: 180px 180px;
     margin: 2.5rem 0 0 0;
     -webkit-column-gap: 2rem;
             column-gap: 2rem;
@@ -1479,5 +1488,91 @@ footer .text {
     width: 160px;
     height: 160px;
     border: 10px solid var(--main-color-1);
+  }
+  .portfolio .portfolio-header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .portfolio .portfolio-header .filter-btns {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .portfolio .portfolio-header .filter-btn {
+    margin: 3rem 0 0 0;
+    font-size: 0.8rem;
+  }
+  .contact .container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .contact-form {
+    margin-top: 3rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .skills-box {
+    padding: 4rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .showcase .showcase-info .square {
+    display: none;
+  }
+  .showcase-image {
+    max-width: 320px;
+  }
+  .about .heading br {
+    display: block;
+  }
+  .about .cta .btn {
+    width: 100%;
+    margin: 0;
+  }
+  .about-grid {
+    -ms-grid-columns: (minmax(140px, 160px))[2];
+        grid-template-columns: repeat(2, minmax(140px, 160px));
+    -ms-grid-rows: (minmax(140px, 160px))[2];
+        grid-template-rows: repeat(2, minmax(140px, 160px));
+  }
+  .skills-box {
+    padding: 2.5rem 2rem;
+  }
+  .skills-wrap {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .portfolio .portfolio-header .filter-btns {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  footer .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  footer .container .logo {
+    margin: 0 0 1.5rem 0;
   }
 }

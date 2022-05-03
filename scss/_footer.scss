@@ -39,3 +39,7 @@ footer {
     font-size: 0.8rem;
   }
 }
+
+body.dark footer .social-link:hover {
+  filter: brightness(120%);
+}
