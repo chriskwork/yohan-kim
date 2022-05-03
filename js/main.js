@@ -19,8 +19,8 @@ let sr = ScrollReveal({
   distance: '60px',
 });
 
-sr.reveal('.showcase-info', { delay: 500 });
-sr.reveal('.showcase-image', { origin: 'top', delay: 600 });
+// sr.reveal('.showcase-info', { delay: 500 });
+// sr.reveal('.showcase-image', { origin: 'top', delay: 600 });
 
 // ################## Skills
 //
@@ -194,3 +194,21 @@ function switchMode(isDark) {
     localStorage.setItem('dark', 0);
   }
 }
+
+// ################## Mobile hamburger menu
+//
+//
+
+const hamburger = document.querySelector('.hamburger');
+
+hamburger.addEventListener('click', () => {
+  document.body.classList.toggle('open');
+  document.body.classList.toggle('stopScroll');
+});
+
+links.forEach((link) => {
+  link.addEventListener('click', () => {
+    document.body.classList.remove('open');
+    document.body.classList.remove('stopScroll');
+  });
+});

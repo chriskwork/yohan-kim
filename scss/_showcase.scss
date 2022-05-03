@@ -14,4 +14,16 @@
       font-size: 3.5rem;
     }
   } // container
+
+  .showcase-info {
+    position: relative;
+  }
+
+  .showcase-info .square {
+    position: absolute;
+    opacity: 0.05;
+    width: 90px;
+    left: 60%;
+    top: 90%;
+  }
 } // showcase
